@@ -8,7 +8,7 @@ mongoose.set("strictQuery", true);
 
 function MongoConnect() {
     mongoose.connect(
-        `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.n087j7g.mongodb.net/?retryWrites=true&w=majority`
+        `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.wvthnwq.mongodb.net/?retryWrites=true&w=majority`
     )
     .then(() => {
         app.listen(port, () => {

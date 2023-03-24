@@ -8,10 +8,10 @@ interface iUserSchema {
 }
 
 const userSchema = new Schema<iUserSchema>({
-    name: { type: String, required: true },
-    username: { type: String, required: true },
-    email: { type: String, required: true },
-    password: { type: String, required: true }
+	name: { type: String, required: true },
+	username: { type: String, required: true },
+	email: { type: String, required: true },
+	password: { type: String, required: true }
 });
 
 const User = model("User", userSchema);

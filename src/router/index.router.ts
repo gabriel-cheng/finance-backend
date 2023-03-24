@@ -1,5 +1,5 @@
 import express from "express";
-import controller from "../controller/index.controller";
+import controller from "../controllers/index.controller";
 import upload from "../config/multer.config";
 import authMiddleware from "../middlewares/auth.middleware";
 const router = express.Router();

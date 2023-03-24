@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import userController from "../controller/user.controller";
+import userController from "../controllers/user.controller";
 import authMiddleware from "../middlewares/auth.middleware";
 
 router.delete("/delete/:id", authMiddleware.checkAuthentication, userController.deleteUser);
