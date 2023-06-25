@@ -1,13 +1,12 @@
 import express from "express";
 import controller from "../controllers/index.controller";
-import upload from "../config/multer.config";
 import authMiddleware from "../middlewares/auth.middleware";
 const router = express.Router();
 
-router.delete("/delete/:id", authMiddleware.checkAuthentication, controller.deleteExistingPost);
-router.patch("/update/:id", authMiddleware.checkAuthentication, upload.single("file"), controller.updateExistingPost);
-router.post("/register", authMiddleware.checkAuthentication, upload.single("file"), controller.registerNewPost);
-router.get("/:id", authMiddleware.checkAuthentication, controller.findPostBtId);
-router.get("/", controller.findAllPosts);
+router.delete("/delete/:id", authMiddleware.checkAuthentication, controller.deleteExistingFinanca);
+router.patch("/update/:id", authMiddleware.checkAuthentication, controller.updateExistingFinanca);
+router.post("/register", authMiddleware.checkAuthentication, controller.registerNewFinanca);
+router.get("/:id", authMiddleware.checkAuthentication, controller.findFinancaById);
+router.get("/", controller.findAllFinancas);
 
 export default router;

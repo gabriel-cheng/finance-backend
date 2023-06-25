@@ -16,7 +16,7 @@ app.use("/posts/files", express.static(path.resolve(__dirname, "../" + "public/u
 
 app.use(express.json());
 
-app.use("/posts", router);
+app.use("/financas", router);
 app.use("/auth/user", user);
 
 export default app;

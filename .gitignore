@@ -1,6 +1,7 @@
 # Specifics
 docs/
 public/uploads/*
+model.json
 
 # Logs
 logs
