@@ -27,19 +27,8 @@ export default {
 			return res.status(404).json({ message: "Item não encontrado!" });
 		}
 
-		interface iReceberUpdate {
-			valor?: number;
-			nota?: string;
-		}
-
-		const {
-			valor,
-			nota
-		} = req.body;
-
-		const receberUpdated: iReceberUpdate = {
-			valor,
-			nota
+		const receberUpdated = {
+			receber: req.body?.receber
 		};
 
 		try {

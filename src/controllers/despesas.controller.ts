@@ -27,20 +27,9 @@ export default {
       return res.status(404).json({ message: "Despesa não encontrada!" });
     }
 
-    interface iDespesaUpdate {
-      valor?: number;
-      nota?: string;
-    }
-
-    const {
-      valor,
-      nota
-    } = req.body;
-
-    const despesaUpdated: iDespesaUpdate = {
-      valor,
-      nota
-    };
+    const despesaUpdated = {
+		despesas: req.body?.despesas
+	};
 
     try {
       await Despesas.updateOne({ _id: id }, despesaUpdated);

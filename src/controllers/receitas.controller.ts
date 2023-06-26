@@ -27,20 +27,9 @@ export default {
       return res.status(404).json({ message: "Receita não encontrada!" });
     }
 
-    interface iReceitaUpdate {
-      valor?: number;
-      nota?: string;
-    }
-
-    const {
-      valor,
-      nota
-    } = req.body;
-
-    const receitaUpdated: iReceitaUpdate = {
-      valor,
-      nota
-    };
+	const receitaUpdated = {
+		receitas: req.body?.receitas
+	};
 
     try {
       await Receitas.updateOne({ _id: id }, receitaUpdated);
